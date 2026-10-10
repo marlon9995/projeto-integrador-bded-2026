@@ -1,0 +1,21 @@
+{
+  "bike_sharing.zip": {
+    "url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+    "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+    "bytes": 279992,
+    "registrado_em_utc": "2026-10-10T17:52:29.514602+00:00",
+    "nota": "Data de registro do snapshot local; as fontes foram coletadas em 10/10/2026."
+  },
+  "nasa_power.json": {
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,RH2M,WS2M,PRECTOTCORR&community=RE&longitude=-77.0369&latitude=38.9072&start=20110101&end=20121231&format=JSON",
+    "sha256": "a1072d741674d0eb27ab96e2ad6a43675150a369765011c64b9c945ebd3fd916",
+    "bytes": 48287,
+    "registrado_em_utc": "2026-10-10T17:52:29.514602+00:00",
+    "nota": "Data de registro do snapshot local; as fontes foram coletadas em 10/10/2026."
+  },
+  "day.csv": {
+    "arquivo_pai": "bike_sharing.zip",
+    "sha256": "a6bcf826782d3c0fbfdcbeead17cd0884185a0dafe8ff10cd48a874ee7ba18be",
+    "bytes": 57569
+  }
+}
