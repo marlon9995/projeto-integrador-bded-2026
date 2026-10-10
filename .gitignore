@@ -1,0 +1,11 @@
+.venv/
+.tools/
+.cache/
+.kernel/
+__pycache__/
+*.pyc
+.env
+.ipynb_checkpoints/
+runtime/
+dist/
+
