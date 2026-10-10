@@ -1,0 +1,14 @@
+{
+  "inicio_utc": "2026-10-10 18:01:46.440373+00:00",
+  "fim_utc": "2026-10-10 18:01:52.336633+00:00",
+  "python": "3.12.14",
+  "plataforma": "Windows-10-10.0.19045-SP0",
+  "versoes": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.3",
+    "scikit-learn": "1.9.1",
+    "psycopg": "3.3.6",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0"
+  }
+}

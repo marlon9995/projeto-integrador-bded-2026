@@ -1,0 +1,22 @@
+{
+  "antes": {
+    "bicicletas": {
+      "linhas": 731,
+      "duplicatas_data": 0,
+      "nulos": 0
+    },
+    "clima": {
+      "linhas": 731,
+      "sentinelas": 0,
+      "nulos_apos_validacao": 0,
+      "duplicatas_data": 0
+    }
+  },
+  "depois": {
+    "calendario": 731,
+    "demanda": 731,
+    "clima": 731
+  },
+  "linhas_removidas": 0,
+  "politica": "Datas e contagens invalidas interrompem ETL; clima invalido vira nulo; imputacao por mediana exclusivamente no treino."
+}

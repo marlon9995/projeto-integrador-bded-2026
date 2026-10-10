@@ -1,0 +1,17 @@
+{
+  "aprovado": true,
+  "verificacoes": {
+    "snapshots_sha256": true,
+    "split_temporal_sem_sobreposicao": true,
+    "features_sem_alvo_ou_parcelas": true,
+    "join_um_para_um": true,
+    "modelo_recarregado_mesmas_predicoes": true,
+    "scaling_ajustado_somente_treino": true,
+    "nasa_efetivamente_utilizada": true,
+    "features_independem_do_alvo": true,
+    "sql_confere_csv": true,
+    "pk_impede_duplicata": true,
+    "check_impede_contagem_incoerente": true,
+    "fk_impede_localidade_orfa": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "localidade": 1,
+  "calendario": 731,
+  "demanda_diaria": 731,
+  "clima_diario": 731,
+  "carga_fonte": 2,
+  "join_linhas": 731,
+  "datas_unicas": 731,
+  "soma_viagens_sql": 3292679,
+  "versao_postgresql": "PostgreSQL 17.11 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit"
+}

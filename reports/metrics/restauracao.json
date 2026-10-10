@@ -1,0 +1,27 @@
+{
+  "restauracao_aprovada": true,
+  "tabelas": {
+    "localidade": {
+      "original": 1,
+      "restaurado": 1
+    },
+    "calendario": {
+      "original": 731,
+      "restaurado": 731
+    },
+    "demanda_diaria": {
+      "original": 731,
+      "restaurado": 731
+    },
+    "clima_diario": {
+      "original": 731,
+      "restaurado": 731
+    },
+    "carga_fonte": {
+      "original": 2,
+      "restaurado": 2
+    }
+  },
+  "dataset_sql_identico": true,
+  "linhas_integradas": 731
+}
