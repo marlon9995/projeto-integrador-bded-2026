@@ -1,0 +1,16 @@
+{
+  "aprovado": true,
+  "clone_publico_sem_autenticacao": true,
+  "repositorio": "https://github.com/marlon9995/projeto-integrador-bded-2026.git",
+  "commit_validado": "a059ed868144d36c8b3e68b2cb69a2f4d2d86a97",
+  "banco_novo_isolado": true,
+  "artefatos_identicos": {
+    "data/processed/dataset_integrado.csv": true,
+    "data/splits/X_train.csv": true,
+    "data/splits/X_test.csv": true,
+    "reports/metrics/comparacao_cv.csv": true,
+    "reports/metrics/predicoes_teste.csv": true,
+    "reports/metrics/resultados.json": true
+  },
+  "python": "3.12.14"
+}
