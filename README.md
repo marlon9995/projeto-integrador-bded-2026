@@ -7,6 +7,8 @@
 
 Pipeline completo com **duas fontes reais e independentes**, PostgreSQL persistente, ETL Python, engenharia de features, regressão e avaliação temporal. O notebook final está em [notebooks/Projeto_Integrador_P15.ipynb](notebooks/Projeto_Integrador_P15.ipynb), com saídas reais de execução.
 
+**Repositório público:** https://github.com/marlon9995/projeto-integrador-bded-2026
+
 ## Problema e escopo
 
 Estimar a quantidade diária de viagens do Capital Bikeshare, em Washington DC e região, a partir de calendário, tendência temporal e meteorologia observada. O objetivo é estudar a demanda histórica e demonstrar a integração de fontes; **não se trata de previsão antecipada**, pois o clima completo do próprio dia é conhecido retrospectivamente.
@@ -28,7 +30,7 @@ Na raiz deste repositório:
 
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
 .\prepare_postgres.ps1
 .\.venv\Scripts\python.exe -m src.run_pipeline
 .\.venv\Scripts\python.exe validate.py
@@ -38,7 +40,16 @@ python -m venv .venv
 
 O último comando **reexecuta o fluxo completo**, testa o banco/modelo e grava o notebook com as novas saídas. Não é necessário executá-lo para apenas ler o notebook entregue. O script usa o mesmo interpretador que o iniciou, sem instalar kernel global. Se a política local impedir scripts PowerShell, abra o script para revisão e siga a política da máquina; o projeto não altera políticas do sistema.
 
+`requirements.txt` lista dependências diretas; `requirements-lock.txt` registra também as transitivas instaladas no ambiente validado. Para obter o projeto via Git, antes dos comandos acima:
+
+```text
+git clone https://github.com/marlon9995/projeto-integrador-bded-2026.git
+cd projeto-integrador-bded-2026
+```
+
 O log `logs/pipeline.log` corresponde à última execução e é renovado a cada rodada. As métricas também são regeneradas. Para testar a restauração do dump em uma base nova, execute `python verify_restore.py` com o mesmo ambiente; esse teste exige permissão de criação de banco e remove somente a base exclusiva criada por ele.
+
+A reprodução foi verificada por clone público sem autenticação, ambiente Python instalado separadamente e base vazia: dataset integrado, splits e resultados ficaram idênticos. Evidência em `reports/metrics/reproducao.json`, com commit validado. O comando `python verify_reproduction.py` repete esse teste; exige Git, rede e permissão de criar banco. A base exclusiva do teste é removida; a cópia do clone fica em `.cache`, fora do versionamento.
 
 `prepare_postgres.ps1` cria banco **mobilidade**, porta **55433**, cluster persistente em `runtime/pgdata`. Usa autenticação integrada **SSPI** com a conta Windows que criou o cluster; não grava senha e não instala serviço do Windows. A pasta `runtime` é local e não é versionada. O banco não é descartado após execução. Para parar o servidor preservando os dados:
 
@@ -131,6 +142,8 @@ O dump contém schema, dados e constraints; não restaure sobre um schema `mobil
 ## Git e entrega no Moodle
 
 O projeto deve ficar em repositório Git acessível ao avaliador. Versione código, snapshots públicos, notebook, documentação, métricas, modelo e SQL. Não envie `runtime`, `.tools`, `.venv`, caches ou `.env`. O `.gitignore` já exclui esses itens.
+
+Uma cópia ZIP de segurança pode ser gerada com `python package_project.py`. O script empacota somente arquivos versionados, cria manifesto SHA-256 e verifica a integridade do ZIP em `dist/Projeto_Integrador_P15.zip`. A pasta `dist` não é versionada.
 
 No Moodle, informe o **link do repositório** e anexe **notebooks/Projeto_Integrador_P15.ipynb**. O ZIP é somente uma cópia de segurança; não substitui o link e o notebook exigidos.
 
